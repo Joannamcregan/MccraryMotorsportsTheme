@@ -1,0 +1,126 @@
+header{
+    background: #171717; /* #333; */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin: 0px;
+    padding: 15px 20px;
+}
+
+header a{
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+#logo{
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+}
+
+#mini-logo{
+    font-size: 24px;
+    display: inline-block;
+    position: absolute;
+    display: none;
+}
+
+.fa-bars{
+    visibility: hidden;
+}
+
+.fa-window-close{
+    visibility: hidden;
+    font-size: 20px;
+}
+
+#menu{
+    margin: 5px auto 5px auto;
+    text-align: center;
+    display: block;
+}
+
+#menu span{
+    margin: 0 20px;
+}
+
+/* Mobile menu--------------------------------------------------------------------------------------- */
+
+.menu-overlay{
+    background: linear-gradient(#171717, #3d3d3d, #171717);
+    color: white;
+    padding: 20px 10% 20px 0px;
+    position: fixed;
+    right: 0;
+    z-index: 999;
+    width: 100vw;
+    /* visibility: hidden; */
+    display: none;
+}
+
+.menu-overlay ul{
+    width: fit-content;
+    margin: 0 auto 0 80%;
+    text-align: center;
+}
+
+.menu-overlay a{
+    text-decoration: none;
+    color: white;
+}
+
+.menu-overlay li{
+    list-style: none;
+    margin: 10px;
+}
+
+.site-header__menu--active{
+    display: block;
+}
+
+.rotated-menu-icon{
+    transform: rotate(270deg);
+}
+
+@media screen and (max-width: 1023px) {
+
+    header{
+        padding-top: 30px;
+    }
+
+    .fa-bars{
+        padding: 10px 20px 0 20px;
+        /* border: solid pink 2px; */
+        font-size: 20px;
+        display: inline-block;
+        visibility: visible;
+    }
+
+    #logo{
+        text-align: right;
+        right: 10px;
+        top: 35px;
+        width: fit-content;
+        padding-bottom: 10px;
+    }
+
+    #menu{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #logo{
+        display: none;
+    }
+
+    #mini-logo{
+        text-align: right;
+        right: 20px;
+        top: 35px;
+        width: fit-content;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+}

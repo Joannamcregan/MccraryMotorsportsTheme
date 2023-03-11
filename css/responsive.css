@@ -1,0 +1,80 @@
+
+#about-section {
+    grid-area: about;
+}
+#services-section {
+    grid-area: services;
+}
+#reviews-section {
+    grid-area: reviews;
+}
+#contact-section {
+    grid-area: contact;
+    box-shadow: 0px 4px 4px 0 #08080840, 0px 0px 12px 10px #3480d9, 0px 0px 4px 5px #3480d9;
+}
+
+@media screen {
+    .main {
+        grid-template-areas:
+            'about'
+            'contact'
+            'services'
+            'reviews';
+    }
+}
+
+/* 768px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .main {
+        grid-template-areas: 
+        'about about about about about'
+        'reviews reviews reviews contact contact'
+        'reviews reviews reviews services services';
+    }
+    #services-section {
+        height: fit-content;
+        margin: 50px auto auto auto;
+    }
+    #contact-section {
+        height: fit-content;
+        width: fit-content;
+        margin: auto auto 30px auto;
+        padding: 20px 40px 10px 40px;
+    }
+  }
+
+/* 1024px */
+@media screen and (min-width: 1024px) {
+    .main {
+        grid-template-areas:
+        'about about about about about'
+        'reviews reviews reviews contact contact'
+        'reviews reviews reviews services services';
+        padding: 30px 10% 50px 10%;
+    }
+    #about-section {
+        height: fit-content;
+        width: auto;
+        margin: auto;
+    }
+    #services-section {
+        height: fit-content;
+        /* width: fit-content; */
+        padding: 20px;
+        margin: auto;
+    }
+    #services-section li {
+        padding-right: 20px;
+    }
+    #contact-section {
+        height: fit-content;
+        width: fit-content;
+        margin: auto;
+        padding: 20px 50px 10px 50px;
+    }
+    #reviews-section {
+        height: fit-content;
+        width: fit-content;
+        margin-left: 50px;
+    }
+  }
